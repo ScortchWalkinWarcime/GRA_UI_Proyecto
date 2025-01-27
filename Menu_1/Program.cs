@@ -29,32 +29,69 @@
 
     static void GraficaColumnas()
     {
-        int[] valores = { 5, 3, 7, 4 };
-        int anchoBarra = 5;
-        int espacioEntreBarras = 2;
+        Console.Clear();
 
-        int anchoTotal = valores.Length * (anchoBarra + espacioEntreBarras) - espacioEntreBarras;
-        int margenIzquierdo = (Console.WindowWidth - anchoTotal) / 2;
+        int baseX = Console.WindowWidth - 1;
+        int baseY = Console.WindowHeight / 2;
+        int altura = 10;
+        int longitudHorizontal = 5;
 
-        for (int i = 0; i < valores.Length; i++)
+        while (baseX > 0)
         {
-            Console.SetCursorPosition(margenIzquierdo + i * (anchoBarra + espacioEntreBarras), Console.CursorTop);
-
-            for (int j = 0; j < anchoBarra; j++)
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            for (int y = 0; y < altura; y++)
             {
-                Console.Write("*");
-            }
-
-            for (int j = 0; j < valores[i]; j++)
-            {
-                Console.SetCursorPosition(Console.CursorLeft - anchoBarra + 1, Console.CursorTop - 1);
-                for (int k = 0; k < anchoBarra; k++)
+                if (baseY - y >= 0)
                 {
+                    Console.SetCursorPosition(baseX, baseY - y);
                     Console.Write("*");
+                    Thread.Sleep(30);
                 }
             }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            for (int x = 1; x <= longitudHorizontal; x++)
+            {
+                if (baseX - x >= 0)
+                {
+                    Console.SetCursorPosition(baseX - x, baseY - altura);
+                    Console.Write("*");
+                    Thread.Sleep(30);
+                }
+            }
+
+            baseX -= longitudHorizontal;
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            for (int y = 0; y < altura; y++)
+            {
+                if (baseY - altura + y < Console.WindowHeight)
+                {
+                    Console.SetCursorPosition(baseX, baseY - altura + y);
+                    Console.Write("*");
+                    Thread.Sleep(30);
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            for (int x = 1; x <= longitudHorizontal; x++)
+            {
+                if (baseX - x >= 0)
+                {
+                    Console.SetCursorPosition(baseX - x, baseY);
+                    Console.Write("*");
+                    Thread.Sleep(30);
+                }
+            }
+
+            baseX -= longitudHorizontal;
         }
+
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("\nPresiona Enter para salir...");
+        Console.ReadLine();
     }
+
 
     private static void Rectangulos()
     {
