@@ -31,13 +31,14 @@
     {
         Console.Clear();
 
-        int baseX = Console.WindowWidth - 1;
-        int baseY = Console.WindowHeight / 2;
-        int altura = 10;
-        int longitudHorizontal = 5;
+        int baseX = Console.WindowWidth - 1; 
+        int baseY = (Console.WindowHeight / 2) + 5; 
+        int altura = 13; 
+        int longitudHorizontal = 6; 
 
         while (baseX > 0)
         {
+            
             Console.ForegroundColor = ConsoleColor.Blue;
             for (int y = 0; y < altura; y++)
             {
@@ -45,10 +46,15 @@
                 {
                     Console.SetCursorPosition(baseX, baseY - y);
                     Console.Write("*");
-                    Thread.Sleep(30);
+                    Thread.Sleep(20);
                 }
             }
 
+         
+            Console.SetCursorPosition(baseX, baseY - altura);
+            Console.Write("*");
+
+            
             Console.ForegroundColor = ConsoleColor.Cyan;
             for (int x = 1; x <= longitudHorizontal; x++)
             {
@@ -56,12 +62,13 @@
                 {
                     Console.SetCursorPosition(baseX - x, baseY - altura);
                     Console.Write("*");
-                    Thread.Sleep(30);
+                    Thread.Sleep(20);
                 }
             }
 
             baseX -= longitudHorizontal;
 
+            
             Console.ForegroundColor = ConsoleColor.Blue;
             for (int y = 0; y < altura; y++)
             {
@@ -69,10 +76,15 @@
                 {
                     Console.SetCursorPosition(baseX, baseY - altura + y);
                     Console.Write("*");
-                    Thread.Sleep(30);
+                    Thread.Sleep(20);
                 }
             }
 
+      
+            Console.SetCursorPosition(baseX, baseY);
+            Console.Write("*");
+
+          
             Console.ForegroundColor = ConsoleColor.Cyan;
             for (int x = 1; x <= longitudHorizontal; x++)
             {
@@ -80,7 +92,7 @@
                 {
                     Console.SetCursorPosition(baseX - x, baseY);
                     Console.Write("*");
-                    Thread.Sleep(30);
+                    Thread.Sleep(20);
                 }
             }
 
@@ -88,7 +100,8 @@
         }
 
         Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine("\nPresiona Enter para salir...");
+        Console.SetCursorPosition(0, Console.WindowHeight - 1);
+        Console.WriteLine("Presiona Enter para salir...");
         Console.ReadLine();
     }
 
