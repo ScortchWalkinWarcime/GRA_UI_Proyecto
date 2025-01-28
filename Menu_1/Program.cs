@@ -95,66 +95,59 @@
 
     private static void Rectangulos()
     {
-        int ancho = Console.WindowWidth;
-        int alto = Console.WindowHeight;
-
-        int inicioX = ancho / 2;
-        int inicioY = alto / 2;
-
-        int paso = 2;
-        int limite = Math.Min(ancho, alto) / 2 - paso;
-
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.SetCursorPosition(40, 4);
+        Console.WriteLine("Dibujando gráfica...\n");
 
-        for (int nivel = 0; nivel <= limite; nivel += paso)
+        int x = 55, y = 17;
+        int paso;
+        int direccion = 2;
+        int espacioHorizontal = 1;
+        int espacioVertical = 1;
+
+        Random random = new Random();
+
+        var direcciones = new (int dx, int dy)[]
         {
-            ConsoleColor color = ObtenerColor(nivel / paso % 4);
-            Console.ForegroundColor = color;
+        (1, 0),
+        (0, 1),
+        (-1, 0),
+        (0, -1)
+        };
 
-            for (int x = inicioX - nivel; x <= inicioX + nivel; x++)
+        int[] pasosPorDireccion = { 4, 2, 9, 4, 14, 6, 19, 8, 24, 10, 29, 12, 34, 14, 39, 16, 44, 18 };
+        direccion = 2;
+
+        for (int i = 0; i < pasosPorDireccion.Length; i++)
+        {
+            paso = pasosPorDireccion[i];
+
+            for (int j = 0; j < paso; j++)
             {
-                Console.SetCursorPosition(x, inicioY - nivel);
+                Console.SetCursorPosition(x, y);
+                CambiarColor(random);
                 Console.Write("*");
-                Thread.Sleep(10);
+                Thread.Sleep(100);
+
+                x += direcciones[direccion].dx * espacioHorizontal;
+                y += direcciones[direccion].dy * espacioVertical;
             }
 
-            for (int y = inicioY - nivel + 1; y <= inicioY + nivel; y++)
-            {
-                Console.SetCursorPosition(inicioX + nivel, y);
-                Console.Write("*");
-                Thread.Sleep(10);
-            }
-
-            for (int x = inicioX + nivel - 1; x >= inicioX - nivel; x--)
-            {
-                Console.SetCursorPosition(x, inicioY + nivel);
-                Console.Write("*");
-                Thread.Sleep(10);
-            }
-
-            for (int y = inicioY + nivel - 1; y > inicioY - nivel; y--)
-            {
-                Console.SetCursorPosition(inicioX - nivel, y);
-                Console.Write("*");
-                Thread.Sleep(10);
-            }
+            direccion = (direccion + 1) % 4;
         }
 
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.SetCursorPosition(0, alto - 1);
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.SetCursorPosition(40, 4);
         Console.WriteLine("\nPresiona Enter para salir...");
         Console.ReadLine();
     }
 
-    static ConsoleColor ObtenerColor(int indice)
+    private static void CambiarColor(Random random)
     {
-        return indice switch
-        {
-            0 => ConsoleColor.Red,
-            1 => ConsoleColor.Green,
-            2 => ConsoleColor.Blue,
-            3 => ConsoleColor.Yellow,
-            _ => ConsoleColor.White,
-        };
+        Console.ForegroundColor = (ConsoleColor)random.Next(1, 16);
     }
+
+
+
 }
