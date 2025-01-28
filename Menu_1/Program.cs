@@ -38,7 +38,7 @@
 
         while (baseX > 0)
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Blue;
             for (int y = 0; y < altura; y++)
             {
                 if (baseY - y >= 0)
@@ -49,7 +49,7 @@
                 }
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             for (int x = 1; x <= longitudHorizontal; x++)
             {
                 if (baseX - x >= 0)
@@ -62,7 +62,7 @@
 
             baseX -= longitudHorizontal;
 
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Blue;
             for (int y = 0; y < altura; y++)
             {
                 if (baseY - altura + y < Console.WindowHeight)
@@ -73,7 +73,7 @@
                 }
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             for (int x = 1; x <= longitudHorizontal; x++)
             {
                 if (baseX - x >= 0)
