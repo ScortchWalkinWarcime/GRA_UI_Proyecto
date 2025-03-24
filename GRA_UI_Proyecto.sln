@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu_1", "Menu_1\Menu_1.csproj", "{3C69723C-4397-454D-B7B2-52E792645469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmFractal01", "FrmFractal01\FrmFractal01.csproj", "{723FAC39-8E38-4938-936B-E9340559382E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FromGrafico", "FromGrafico\FromGrafico.csproj", "{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{3C69723C-4397-454D-B7B2-52E792645469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C69723C-4397-454D-B7B2-52E792645469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C69723C-4397-454D-B7B2-52E792645469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723FAC39-8E38-4938-936B-E9340559382E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723FAC39-8E38-4938-936B-E9340559382E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723FAC39-8E38-4938-936B-E9340559382E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723FAC39-8E38-4938-936B-E9340559382E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84037631-7208-41D7-9E1E-D34B3087AE08}
 	EndGlobalSection
 EndGlobal
