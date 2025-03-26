@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmFractal01", "FrmFractal0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FromGrafico", "FromGrafico\FromGrafico.csproj", "{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fractal02", "Fractal02\Fractal02.csproj", "{DB9D098A-1D15-41A7-946D-F8F04F4D477B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{998A3CE5-B5F7-4C87-A2A3-1F83D0824078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9D098A-1D15-41A7-946D-F8F04F4D477B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9D098A-1D15-41A7-946D-F8F04F4D477B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9D098A-1D15-41A7-946D-F8F04F4D477B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9D098A-1D15-41A7-946D-F8F04F4D477B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

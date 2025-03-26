@@ -31,16 +31,16 @@ namespace FrmFractal01
 
             for (int row = 0; row < width; row++)
             {
-                for (int col = 0; col < height; col++) 
+                for (int col = 0; col < height; col++)
                 {
                     double c_re = (col - width / 2.0) * 4.0 / width;
                     double c_im = (row - height / 2.0) * 4.0 / width;
 
-                    int interacciones=0;
-                    double x = 0, y=0;
+                    int interacciones = 0;
+                    double x = 0, y = 0;
 
-                    while (interacciones < 1000 && ((x * x) + (y *y)) <= 4) 
-                    { 
+                    while (interacciones < 1000 && ((x * x) + (y * y)) <= 4)
+                    {
                         double x_temporal = x * x - y * y + c_re;
                         y = 2 * x * y + c_im;
                         x = x_temporal;
@@ -50,13 +50,18 @@ namespace FrmFractal01
                     {
                         bmp.SetPixel(col, row, Color.Black);
                     }
-                    else 
+                    else
                     {
                         bmp.SetPixel(col, row, Color.Blue);
                     }
                 }
             }
             PictureBoxMandelbrot.Image = bmp;
+        }
+
+        private void PictureBoxMandelbrot_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

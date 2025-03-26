@@ -39,6 +39,7 @@
             PictureBoxMandelbrot.Size = new Size(550, 550);
             PictureBoxMandelbrot.TabIndex = 0;
             PictureBoxMandelbrot.TabStop = false;
+            PictureBoxMandelbrot.Click += PictureBoxMandelbrot_Click;
             // 
             // Fractales
             // 
