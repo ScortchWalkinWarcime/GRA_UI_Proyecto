@@ -20,13 +20,14 @@ namespace FrmFractal01
         private void Fractales_Load(object sender, EventArgs e)
         {
             mandelbrotSet();
+            juliaSet();
+            sierpinskiTriangle();
         }
 
         private void mandelbrotSet()
         {
             int width = PictureBoxMandelbrot.Width;
             int height = PictureBoxMandelbrot.Height;
-
             Bitmap bmp = new Bitmap(width, height);
 
             for (int row = 0; row < width; row++)
@@ -46,9 +47,9 @@ namespace FrmFractal01
                         x = x_temporal;
                         interacciones++;
                     }
-                    if (interacciones < 1000)
+                    bmp.SetPixel(col, row, interacciones < 1000 ? Color.Black : Color.Blue);
                     {
-                        bmp.SetPixel(col, row, Color.Black);
+            int width = pictureBoxFractal2.Width;
                     }
                     else
                     {
